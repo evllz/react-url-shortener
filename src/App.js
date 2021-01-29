@@ -9,12 +9,11 @@ export default function App() {
   const [url, setUrl] = useState({
     long_url: "",
     domain: "bit.ly",
-    group_guid: process.env.roup_guid,
+    group_guid: "o_47b15pa5sq",
   });
   const [res, setRes] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(process.env);
     axiosWithAuth()
       .post("https://api-ssl.bitly.com/v4/shorten", url)
       .then((res) => {
@@ -57,6 +56,8 @@ export default function App() {
               margin: "15px",
               border: "black solid 1px",
               padding: "10px",
+              width: "40%",
+              marginLeft: "30%",
             }}>
             Link: {res}
             <CopyToClipboard text={res}>
