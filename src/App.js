@@ -8,8 +8,8 @@ import AssignmentIcon from "@material-ui/icons/Assignment";
 export default function App() {
   const [url, setUrl] = useState({
     long_url: "",
-    domain: "bit.ly",
-    group_guid: "o_47b15pa5sq",
+    // domain: "bit.ly",
+    // group_guid: "o_47b15pa5sq",
   });
   const [res, setRes] = useState("");
   const handleSubmit = (e) => {
